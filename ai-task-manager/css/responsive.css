@@ -1,0 +1,151 @@
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+/* Tablet & Below */
+@media (max-width: 1024px) {
+    /* Header adjustments */
+    .header {
+        padding: 0 var(--space-4);
+    }
+
+    .header-center {
+        margin: 0 var(--space-4);
+        max-width: 400px;
+    }
+
+    /* ✅ NEW: Sidebar mobile behavior with smooth animation */
+    .sidebar {
+        position: fixed;
+        left: 0;
+        top: var(--header-height);
+        height: calc(100vh - var(--header-height));
+        z-index: var(--z-fixed);
+        transform: translateX(-100%);
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+        box-shadow: 4px 0 12px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ✅ NEW: Backdrop overlay */
+    .sidebar-backdrop {
+        position: fixed;
+        top: var(--header-height);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: calc(var(--z-fixed) - 1);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .sidebar-backdrop.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Content adjustments */
+    .content-header {
+        padding: var(--space-4);
+    }
+
+    .board-title {
+        font-size: var(--text-2xl);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    /* Header mobile */
+    .header {
+        padding: 0 var(--space-3);
+    }
+
+    .header-center {
+        display: none;
+    }
+
+    .logo-text {
+        display: none;
+    }
+
+    /* Content mobile */
+    .content-header {
+        padding: var(--space-3);
+    }
+
+    .board-actions-group {
+        flex-direction: column;
+        gap: var(--space-2);
+    }
+
+    /* Stats mobile */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    /* Notifications mobile */
+    #notification-container {
+        top: 70px !important;
+        right: 16px !important;
+        left: 16px !important;
+        max-width: none !important;
+    }
+
+    /* Kanban board mobile */
+    .kanban-board {
+        padding: var(--space-3);
+    }
+
+    .kanban-column {
+        width: 280px;
+        min-width: 280px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .header {
+        padding: 0 var(--space-2);
+    }
+
+    .sidebar {
+        width: calc(100vw - 60px);
+        max-width: var(--sidebar-width);
+    }
+
+    .kanban-column {
+        width: 260px;
+        min-width: 260px;
+    }
+
+    .modal {
+        width: calc(100vw - 32px);
+        max-height: calc(100vh - 80px);
+        margin: 40px 16px;
+    }
+}
+
+/* Large Desktop */
+@media (min-width: 1920px) {
+    .main-container {
+        max-width: 2400px;
+        margin: 0 auto;
+    }
+
+    .header {
+        max-width: 2400px;
+        margin: 0 auto;
+    }
+
+    .kanban-column {
+        width: 360px;
+        min-width: 360px;
+    }
+}
