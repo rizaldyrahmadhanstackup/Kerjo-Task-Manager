@@ -15,70 +15,34 @@ Kerjo adalah aplikasi **Kanban Task Management** modern yang dibuat dengan **Van
 
 ## ✨ Tech Stack
 
-Frontend: Vanilla JS (ES6 Modules)
-Styling: Modular CSS (8 files)
-Storage: LocalStorage
-Size: ~150 KB
+- Frontend: Vanilla JS (ES6 Modules)
+- Styling: Modular CSS (8 files)
+- Storage: LocalStorage
+- Size: ~150 KB
 
-text
 
 ## 📱 Demo
 
 Live: `https://username.github.io/kerjo`
 
-## 🚀 Quick Deploy
+## Settings → Pages → Deploy from: main
 
-```bash
-git clone https://github.com/username/kerjo.git
-cd kerjo
-git push origin main
-
-# Settings → Pages → Deploy from: main
-📂 File Structure
-text
-kerjo/
-├── index.html
-├── css/          (8 modular CSS files)
-├── js/
-│   ├── app.js
-│   ├── config.js
-│   ├── modules/  (Storage, Board, Task)
-│   ├── components/ (Modal, Toast)
-│   └── utils/
 🎯 Keyboard Shortcuts
 Key	Action
-N	New Task
-/	Search
-Esc	Close Modal
+
+- 'N'	New Task
+- '/'	Search
+- 'Esc'	Close Modal
+
 📊 Performance
-Metric	Value
-Total Size	~150 KB
-Load Time	< 500ms
-Dependencies	Zero!
-🛠 Development
-bash
-npx serve .  # Live reload
+- Metric	Value
+- Total Size	~150 KB
+- Load Time	< 500ms
+- Dependencies	Zero!
+
 📈 Roadmap
- Kanban Drag & Drop
-
- Multi Board
-
- Responsive Design
-
- PWA Support
-
- AI Features
-
-🤝 Contributing
-Fork project
-
-Create feature branch
-
-Commit changes
-
-Open Pull Request
-
-📄 License
-MIT License
-
-Made in Indonesia 🇮🇩 | Kerja Jadi Rapi ✨
+- Kanban Drag & Drop
+- Multi Board
+- Responsive Design
+- PWA Support
+- AI Features
